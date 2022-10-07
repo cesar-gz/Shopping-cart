@@ -8,8 +8,8 @@ seeing the bill total. Then you can logout when you're done.
 
 I used the PHP & MySQL In Easy Steps second edition book from Mike McGrath to help create this application.
 
+![alt text](https://i.ibb.co/2N4n3Mc/shop.png)
+
 ![alt text](https://i.ibb.co/nBxJnWB/shopping-cart.png)
 
 ![alt text](https://i.ibb.co/wW5BGwD/forum.png)
-
-![alt text](https://i.ibb.co/2N4n3Mc/shop.png)
