@@ -7,3 +7,5 @@ Then you can make a post on a small forum. Browse a shop, select items to add to
 seeing the bill total. Then you can logout when you're done.
 
 I used the PHP & MySQL In Easy Steps second edition book from Mike McGrath to help create this application.
+
+![alt text](https://i.ibb.co/nBxJnWB/shopping-cart.png)
