@@ -1,10 +1,10 @@
 <?php
 
-    $page_title = 'Register';
+    $page_title = 'Register an Account';
     include('includes/header.html');
 
     if($_SERVER['REQUEST_METHOD']  == 'POST'){
-        
+
         require('../connect_db.php');
         $errors = array();
 
@@ -74,40 +74,42 @@
             mysqli_close($dbc);
         }
     }
+
+    echo '<p><a href ="login.php">Log In</a>';
+
 ?>
 
-<h1>Register</h1>
-<form action="register.php" method="POST">
-    <p>
-        First Name:<input type="text" name="first_name"
-        value="<?php if(isset($POST['first_name']))
-               echo $_POST['first_name'];
-               ?>">
-        Last Name:<input type="text" name="last_name"
-        value="<?php if(isset($POST['last_name']))
-               echo $_POST['last_name'];
-               ?>">
-    </p><p>
-        Email Address:<input type="text" name="email"
-            value="<?php if(isset($POST['email']))
-                echo $_POST['email'];
-                ?>">
-    </p><p>
-        Password:<input type="password" name="pass1"
-            value="<?php if(isset($POST['pass1']))
-                echo $_POST['pass1'];
-                ?>">
-        Confirm Password:<input type="password" name="pass2"
-            value="<?php if(isset($POST['pass2']))
-                echo $_POST['pass2'];
-                ?>">
-    </p><p>
-        <input type="submit" value ="Register"></p>
-</form>
+  <h1>Register an Account</h1>
+  <div class="content">
+    <form action="register.php" method="POST">
+        <p>
+            First Name:<input type="text" name="first_name"
+            value="<?php if(isset($POST['first_name']))
+                  echo $_POST['first_name'];
+                  ?>">
+            Last Name:<input type="text" name="last_name"
+            value="<?php if(isset($POST['last_name']))
+                  echo $_POST['last_name'];
+                  ?>">
+        </p><p>
+            Password:<input type="password" name="pass1"
+                value="<?php if(isset($POST['pass1']))
+                    echo $_POST['pass1'];
+                    ?>">
+            Confirm Password:<input type="password" name="pass2"
+                value="<?php if(isset($POST['pass2']))
+                    echo $_POST['pass2'];
+                    ?>">
+        </p><p>
+            Email Address:<input type="text" name="email"
+                value="<?php if(isset($POST['email']))
+                    echo $_POST['email'];
+                    ?>">
+        </p>
+        <p><input type="submit" value ="Register"></p>
+    </form>
+  </div>
 
 <?php
-
-    echo '<p><a href ="login.php">Login</a>'; 
-
     include('includes/footer.html');
 ?>

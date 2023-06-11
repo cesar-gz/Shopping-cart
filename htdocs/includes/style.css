@@ -1,34 +1,72 @@
-header > h1 {
-    border-bottom: 1px dashed black;
-    font-style: italic;
-    font-size: x-large;
+header>h1 {
+  border-bottom: 3px dashed #FF9900;
+  display: flex;
+  font-style: italic;
+  justify-content: center;
+  color: #ffffff;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 28px;
+  padding-bottom: 10px;
 }
 
-footer > p {
-    border-top: 1px dashed black;
-    font-style: italic;
+footer>p {
+  border-top: 3px dashed #FF9900;
+  font-style: italic;
+  padding-top: 5px;
+  color: #fff;
+  font-size: 18px;
 }
 
-table{
-    border-spacing: 5px;
-    width: 530px;
+table {
+  border-spacing: 5px;
+  width: 530px;
 }
 
-th{
-    color: #FFF;
-    background: #000;
-    text-align: left;
+th {
+  color: #FFF;
+  background: #000;
+  text-align: left;
 }
 
-td{
-    border-bottom: 1px solid black;
-    padding: 3px;
-    background: #F0F0F0;
-    text-align: left;
-    vertical-align: top;
+td {
+  border-bottom: 1px solid black;
+  padding: 3px;
+  background: #F0F0F0;
+  text-align: left;
+  vertical-align: top;
 }
 
-p#err_msg{
-    color: #F00;
-    font-weight: bold;
+p#err_msg {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+body {
+  background-color: #501212;
+  color: #fff;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  color: #F0F0F0;
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.content>a:href {
+  color: #F0F0F0
+}
+
+a {
+  color: #FF9900;
+  font-size: 18px;
+  text-decoration: none;
+  background-color: #cd451f;
+  border-radius: 5px;
+  padding: 6px;
 }
