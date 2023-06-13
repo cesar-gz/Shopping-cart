@@ -1,5 +1,4 @@
 <?php
-
     session_start();
 
     if(!isset($_SESSION['user_id'])){
@@ -11,29 +10,39 @@
     include('includes/header.html');
 
     require('../connect_db.php');
+?>
 
-    $q = "SELECT * FROM forum";
-    $r = mysqli_query($dbc, $q);
-    if(mysqli_num_rows($r)>0){
-        echo '<table><tr><th>Posted By</th><th>Subject</th><th id = "msg">Message</th></tr>';
-        while($row = mysqli_fetch_array($r, MYSQLI_ASSOC)){
-            echo '<tr>
-            <td>'.$row['first_name'].''.$row['last_name'].'<br>'.$row['post_date'].'</td>
-            <td>'.$row['subject'].'</td><td>'.$row['message'].'</td></tr>
-            ';
-        }
-        echo '</table>';
-    }
-    else{
-        echo '<p>There are currently no messages. Why not add some?</p>';
-    }
+<div class="content">
+    <p>
+      <a href="post.php">Post Message</a> |
+      <a href="shop.php">Shop</a> |
+      <a href="home.php">Home</a> |
+      <a href="goodbye.php">Logout</a>
+    </p>
+</div>
 
-    echo '<p>
-        <a href="post.php">Post Message</a> |
-        <a href="shop.php">Shop</a> |
-        <a href="home.php">Home</a> |
-        <a href="goodbye.php">Logout</a></p>';
+<div class="content">
+  <?php
+      $q = "SELECT * FROM forum";
+      $r = mysqli_query($dbc, $q);
+      if(mysqli_num_rows($r)>0){
+          echo '<table><tr><th>Posted By</th><th>Subject</th><th id = "msg">Message</th></tr>';
+          while($row = mysqli_fetch_array($r, MYSQLI_ASSOC)){
+              echo '<tr>
+              <td>'.$row['first_name'].''.$row['last_name'].'<br>'.$row['post_date'].'</td>
+              <td>'.$row['subject'].'</td><td>'.$row['message'].'</td></tr>
+              ';
+          }
+          echo '</table>';
+      }
+      else{
+          echo '<p>There are currently no messages. Why not add some?</p>';
+      }
 
-    mysqli_close($dbc);
+      mysqli_close($dbc);
+  ?>
+</div>
+
+<?php
     include('includes/footer.html');
 ?>

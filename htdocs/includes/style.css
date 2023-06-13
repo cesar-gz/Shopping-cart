@@ -14,7 +14,7 @@ footer>p {
   font-style: italic;
   padding-top: 5px;
   color: #fff;
-  font-size: 18px;
+  font-size: 19px;
 }
 
 table {
@@ -24,7 +24,7 @@ table {
 
 th {
   color: #FFF;
-  background: #000;
+  background: #000000;
   text-align: left;
 }
 
@@ -51,15 +51,15 @@ body {
   justify-content: center;
 }
 
+.content>a:href {
+  color: #F0F0F0
+}
+
 h1 {
   color: #F0F0F0;
   display: flex;
   justify-content: center;
   font-size: 24px;
-}
-
-.content>a:href {
-  color: #F0F0F0
 }
 
 a {

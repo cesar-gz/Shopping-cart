@@ -1,5 +1,4 @@
 <?php
-
     session_start();
 
     if(!isset($_SESSION['user_id'])){
@@ -11,7 +10,19 @@
     include('includes/header.html');
 
     require('../connect_db.php');
+?>
 
+<div class="content">
+  <p>
+    <a href="cart.php">View Cart</a> |
+    <a href="forum.php">Forum</a> |
+    <a href="home.php">Home</a> |
+    <a href="goodbye.php">Logout</a>
+  </p>
+</div>
+
+<div class="images">
+<?php
     $q = "SELECT * FROM shop";
     $r = mysqli_query($dbc,$q);
     if(mysqli_num_rows($r)>0){
@@ -26,13 +37,9 @@
     else{
         echo '<p>There are currently no items in this shop.</p>';
     }
+?>
+</div>
 
-    echo '<p><a href="cart.php">View Cart</a> |
-             <a href="forum.php">Forum</a> |
-             <a href="home.php">Home</a> |
-             <a href="goodbye.php">Logout</a>
-          </p>';
-
+<?php
     include('includes/footer.html');
-    
 ?>

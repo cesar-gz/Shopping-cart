@@ -6,17 +6,23 @@
         load();
     }
 
-    $page_title = 'Home';
+    $page_title = 'Home Page';
     include('includes/header.html');
 
     echo "<h1>Welcome Home</h1>
-          <p>You are now logged in, {$_SESSION['first_name']} {$_SESSION['last_name']}</p>";
-    
-    echo '<p>
+          <p class='content'>You are now logged in, {$_SESSION['first_name']} {$_SESSION['last_name']}</p>";
+
+
+?>
+    <div class="content">
+          <p>
           <a href ="forum.php">Forum</a> |
           <a href ="shop.php">Shop</a> |
           <a href ="goodbye.php">Logout</a>
-          </p>';
+          </p>
+    </div>
 
+<?php
     include('includes/footer.html');
+
 ?>

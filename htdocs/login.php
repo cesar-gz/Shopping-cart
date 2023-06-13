@@ -1,5 +1,5 @@
 <?php
-    $page_title = 'Login';
+    $page_title = 'Log In';
     include('includes/header.html');
 
     if(isset($errors) && !empty($errors)){
@@ -9,21 +9,24 @@
         }
         echo 'Please try again or <a href="register.php">Register<a></p>';
     }
+
 ?>
-
-<h1>Login</h1>
-<form action="login_action.php" method="POST">
-    <P>
-        Email Address: <input type="text" name="email">
-    </p><p>
-        Password: <input type="password" name="pass">
-    </p><p>
-        <input type="submit" value="Login">
-    </p>
-</form>
-
+  <div class="content">
+    <p><a href ="register.php">Click Here to Register</a>
+  </div>
+  <h1>Log In</h1>
+  <div class="content">
+    <form action="login_action.php" method="POST">
+        <P>
+            Email Address: <input type="text" name="email">
+        </p><p>
+            Password: <input type="password" name="pass">
+        </p><p>
+            <input type="submit" value="Login">
+        </p>
+    </form>
+  </div>
 <?php
-    echo '<p><a href ="register.php">Register</a>'; 
 
     include('includes/footer.html');
 ?>

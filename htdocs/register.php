@@ -56,8 +56,8 @@
 
             if($r){
                 echo '<h1>Registered!</h1>
-                      <p>You are now Registered.</p>
-                      <p><a href="login.php">Login</a></p>';
+                      <p style="display:flex; justify-content:center;">You are now Registered.</p>
+                      <p style="display:flex; justify-content:center;"><a href="login.php">Login</a></p>';
             }
 
             mysqli_close($dbc);
