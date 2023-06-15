@@ -26,11 +26,18 @@
       $q = "SELECT * FROM forum";
       $r = mysqli_query($dbc, $q);
       if(mysqli_num_rows($r)>0){
-          echo '<table><tr><th>Posted By</th><th>Subject</th><th id = "msg">Message</th></tr>';
+          echo '<table style="background: #26120d; position: relative; ">
+                <tr>
+                  <th style="color:#FF9900; text-align:center;">Subject</th>
+                  <th style="color:#FF9900; text-align:center;" id = "msg">Message</th>
+                  <th style="color:#FF9900; text-align:center;">Posted By</th>
+                </tr>';
           while($row = mysqli_fetch_array($r, MYSQLI_ASSOC)){
               echo '<tr>
-              <td>'.$row['first_name'].''.$row['last_name'].'<br>'.$row['post_date'].'</td>
-              <td>'.$row['subject'].'</td><td>'.$row['message'].'</td></tr>
+                    <td style="background: #57291d; color:#f8e293; text-align:center;">'.$row['subject'].'</td>
+                    <td style="background: #57291d; color:#ff9376;">'.$row['message'].'</td>
+                    <td style="background: #57291d; color:#f8a993; text-align:center;">'.$row['first_name'].''.$row['last_name'].'<br>'.$row['post_date'].'</td>
+                    </tr>
               ';
           }
           echo '</table>';
