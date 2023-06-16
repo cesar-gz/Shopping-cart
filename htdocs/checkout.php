@@ -6,7 +6,7 @@
         require('login_tools.php');
         load();
     }
-    
+
     $page_title = 'Checkout';
     include('includes/header.html');
 
@@ -35,14 +35,14 @@
         }
 
         mysqli_close($dbc);
-        echo "<p>Thanks for your order. Your Order Number is #".$order_id."</p>";
+        echo "<p style='text-align:center;'>Thanks for your order. Your Order Number is #".$order_id."</p>";
         $_SESSION['cart'] = NULL;
     }
     else{
-        echo '<p>There are no items in your cart.</p>';
+        echo '<p style="text-align:center;">There are no items in your cart.</p>';
     }
 
-    echo '<p><a href="shop.php">Shop</a> |
+    echo '<p style="text-align:center;"><a href="shop.php">Shop</a> |
           <a href="forum.php">Forum</a> |
           <a href="home.php">Home</a> |
           <a href="goodbye.php">Logout</a>

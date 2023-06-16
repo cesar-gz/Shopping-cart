@@ -75,7 +75,7 @@
         }
     }
 
-    echo '<p><a href ="login.php">Log In</a>';
+    echo '<p style="text-align:center;"><a href ="login.php">Log In</a>';
 
 ?>
 

@@ -40,7 +40,7 @@
           $q = substr($q, 0, -1) . ') ORDER BY item_id ASC';
           $r = mysqli_query($dbc, $q);
 
-          echo '<form action="cart.php method="POST"><table style="background: #26120d;">
+          echo '<form action="cart.php" method="POST"><table style="background: #26120d;">
                 <tr><th style="color:#FF9900; text-align:center;" colspan="5">Items in your cart</th></tr><tr>';
 
           while($row = mysqli_fetch_array($r, MYSQLI_ASSOC)){
@@ -59,18 +59,16 @@
           }
 
           echo ' <tr><td style="background: #57291d; text-align:right; color:red;" colspan="5">
-              Total = '.number_format($total, 2).'</td></tr>
-              </table>
-              <input
-                  style="color:#FF9900; background-color: #cd451f; float:right; padding: 6px; margin-top: 6px; border-radius: 5px; border: solid 1px #FF9900;"
-                  type="submit" value="Update My Cart">
-              </form>';
+                  Total = '.number_format($total, 2).'</td></tr>
+                  </table>
+                  <input type="submit" value="Update My Cart" style="color:#FF9900; background-color: #cd451f; cursor:pointer; float:right; padding: 6px; margin-top: 6px; border-radius: 5px; border: solid 1px #FF9900;">
+                  </form>';
 
           mysqli_close($dbc);
 
       }
       else{
-          echo '<p>Your cart is currently empty.</p>';
+          echo '<p style="text-align:center;">Your cart is currently empty.</p>';
       }
 
       echo '<p style="position:absolute; top:75px;">
